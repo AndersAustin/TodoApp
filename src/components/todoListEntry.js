@@ -1,8 +1,10 @@
 import React from 'react'
 
-const ListEntry = (props) => {
+var ListEntry = (props) => {
   return (
-    <li>{props.item}</li>
+    <div>
+    <span onClick={() => props.setPrio(props.item)}>{props.item}</span>  <button onClick={props.doDelete} value={props.item}>x</button>
+    </div>
   )
 }
 
